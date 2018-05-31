@@ -1,0 +1,23 @@
+TEAM NAUTILUS (Bill Ni, Kyle Tau, Susan Lin) 
+HW#55 -- A Man, a Plan, a Canal: Panama! 
+R 2018-05-31 
+
+Which jobs are most crucial? 
+	menu creation: buttons, background, animation for buttons, and static pages from the menu i.e. instructions/credits
+  
+  game core improvement: difficulty, animation in background, scoring
+  
+Which components constitute core functionality (vs. non-essential)? 
+  essential: the game core (moving arrows, reading keys to score and remove arrows)
+  
+  non-essential: instructions, credits, life bar (<- not planned but possible), difficulties, double arrows (two at a time)
+  
+Which components are prerequisites for others? 
+  menu is prereq for instructions and credits
+  
+  game core is prereq for everything added to it
+  
+Which tasks can be delegated and which must be collaboratively tackled? 
+  menu can be delegated
+  
+  game core MUST be either pair or triplet programmed (especially scoring part)
