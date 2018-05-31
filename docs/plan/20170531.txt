@@ -5,9 +5,13 @@ R 2018-05-31
 - Bill : maintain Dance Dance Revolution idea sacrificing music
 
 Which jobs are most crucial? 
+	The creation of the UML, our base code, what our base code will include (i.e. implementing queue and determining which methods are needed), and sketching the outlook of the game itself. We definitely need to include here the code for accounting for score (as outlined in proposal). 
 
 Which components constitute core functionality (vs. non-essential)? 
+	The essential parts are all that the game will require to run (one difficulty level class will do) and then the non-essential part would be varying difficulty and creating a menu/credits page.
 
 Which components are prerequisites for others? 
+	We need to have a difficulty level class before trying to make it user-interactive which also means we need to have the text files for the moves for that song. 
 
 Which tasks can be delegated and which must be collaboratively tackled? 
+	I think our foundation (so all the crucial jobs) should be collaboratively thought out and hopefully coded. All the other stuff is accessory and writing more difficulty levels should not be a problem to do individually as long as we have one class we all agree on. 
