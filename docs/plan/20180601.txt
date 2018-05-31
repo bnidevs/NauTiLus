@@ -1,6 +1,5 @@
 TEAM NAUTILUS (Bill Ni, Kyle Tau, Susan Lin) 
-HW#55 -- A Man, a Plan, a Canal: Panama! 
-R 2018-05-31 
+F 2018-06-01
 
 Which jobs are most crucial? 
 	menu creation: buttons, background, animation for buttons, and static pages from the menu i.e. instructions/credits
