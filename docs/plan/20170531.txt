@@ -4,6 +4,8 @@ R 2018-05-31
 
 Which jobs are most crucial? 
 
+- Bill : maintain Dance Dance Revolution idea sacrificing music
+
 Which components constitute core functionality (vs. non-essential)? 
 
 Which components are prerequisites for others? 
