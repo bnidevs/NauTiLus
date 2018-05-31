@@ -2,9 +2,9 @@ TEAM NAUTILUS (Bill Ni, Kyle Tau, Susan Lin)
 HW#55 -- A Man, a Plan, a Canal: Panama! 
 R 2018-05-31 
 
-Which jobs are most crucial? 
-
 - Bill : maintain Dance Dance Revolution idea sacrificing music
+
+Which jobs are most crucial? 
 
 Which components constitute core functionality (vs. non-essential)? 
 
