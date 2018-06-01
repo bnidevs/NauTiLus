@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 
-PShape right, left, up, down;
-PShape[] matchArrs;
+Arrow right, left, up, down;
+Arrow[] matchArrs;
 ArrayList<String> moves;
-ArrayList<PShape> moveArrs;
+ArrayList<Arrow> moveArrs;
 int ctr;
 
 void setup(){
@@ -35,7 +35,7 @@ void ctrSetup(){
 
 void moveSetup(){
   moves = new ArrayList<String>();
-  moveArrs = new ArrayList<PShape>();
+  moveArrs = new ArrayList<Arrow>();
 }
 
 PShape makeArrow(int i){
@@ -105,51 +105,31 @@ PShape makeArrow(int i){
 }
 
 void arrowSetup(){
-  matchArrs = new PShape[4];
+  matchArrs = new Arrow[4];
   
   //  ******************* RIGHT ARROW SETUP BEGIN *******************
-  right = makeArrow(0);
-  
-  right.setFill(220);
-  right.setStroke(235);
-  
-  matchArrs[0] = right;
+  matchArrs[0] = new Arrow(0);
   //  ******************** RIGHT ARROW SETUP END ********************
   
   //  ******************* LEFT ARROW SETUP BEGIN ********************
-  left = makeArrow(1);
-  
-  left.setFill(220);
-  left.setStroke(235);
-  
-  matchArrs[1] = left;
+  matchArrs[1] = new Arrow(1); 
   //  ******************** LEFT ARROW SETUP END *********************
   
   //  ********************* UP ARROW SETUP BEGIN ********************
-  up = makeArrow(2);
-  
-  up.setFill(220);
-  up.setStroke(235);
-  
-  matchArrs[2] = up;
+  matchArrs[2] = new Arrow(2);
   //  ********************** UP ARROW SETUP END *********************
   
   //  ******************** DOWN ARROW SETUP BEGIN *******************
-  down = makeArrow(3);
-  
-  down.setFill(220);
-  down.setStroke(235);
-  
-  matchArrs[3] = down;
+  matchArrs[3] = new Arrow(3);
   //  ********************* DOWN ARROW SETUP END ********************
 }
 
 void arrowDraw(){
-  for(PShape p : matchArrs){
-    shape(p);
+  for(Arrow p : matchArrs){
+    shape(p.arrowShape);
   }
-  for(PShape p : moveArrs){
-    shape(p);
+  for(Arrow p : moveArrs){
+    shape(p.arrowShape);
   }
 }
 
@@ -158,25 +138,24 @@ void addMove(){
   
   if(decision < 0.25){
     moves.add("w");
-    PShape temp = makeArrow(2);
-    temp.setFill(0);
-    temp.translate(0,600);
+    Arrow temp = new Arrow(2);
+    temp.tempSet();
     moveArrs.add(temp);
   }else if(decision < 0.5){
     moves.add("a");
-    PShape temp = makeArrow(0);
+    Arrow temp = new Arrow(0);
     temp.setFill(0);
     temp.translate(0,600);
     moveArrs.add(temp);
   }else if(decision < 0.75){
     moves.add("s");
-    PShape temp = makeArrow(3);
+    Arrow temp = new Arrow(3);
     temp.setFill(0);
     temp.translate(0,600);
     moveArrs.add(temp);
   }else{
     moves.add("d");
-    PShape temp = makeArrow(1);
+    Arrow temp = new Arrow(1);
     temp.setFill(0);
     temp.translate(0,600);
     moveArrs.add(temp);
