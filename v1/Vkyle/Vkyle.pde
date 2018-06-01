@@ -38,72 +38,6 @@ void moveSetup(){
   moveArrs = new ArrayList<Arrow>();
 }
 
-PShape makeArrow(int i){
-  PShape rtrnShape = createShape();
-  if(i == 0){
-    rtrnShape.beginShape();
-    rtrnShape.strokeWeight(2);
-    rtrnShape.vertex(10,30);
-    rtrnShape.vertex(30,10);
-    rtrnShape.vertex(35,15);
-    rtrnShape.vertex(25,25);
-    rtrnShape.vertex(50,25);
-    rtrnShape.vertex(55,30);
-    rtrnShape.vertex(50,35);
-    rtrnShape.vertex(25,35);
-    rtrnShape.vertex(35,45);
-    rtrnShape.vertex(30,50);
-    rtrnShape.vertex(10,30);
-    rtrnShape.endShape();
-  }else if(i == 1){
-    rtrnShape.beginShape();
-    rtrnShape.strokeWeight(2);
-    rtrnShape.vertex(210,30);
-    rtrnShape.vertex(190,10);
-    rtrnShape.vertex(185,15);
-    rtrnShape.vertex(195,25);
-    rtrnShape.vertex(170,25);
-    rtrnShape.vertex(165,30);
-    rtrnShape.vertex(170,35);
-    rtrnShape.vertex(195,35);
-    rtrnShape.vertex(185,45);
-    rtrnShape.vertex(190,50);
-    rtrnShape.vertex(210,30);
-    rtrnShape.endShape();
-  }else if(i == 2){
-    rtrnShape.beginShape();
-    rtrnShape.strokeWeight(2);
-    rtrnShape.vertex(85,7);
-    rtrnShape.vertex(65,27);
-    rtrnShape.vertex(70,32);
-    rtrnShape.vertex(80,22);
-    rtrnShape.vertex(80,47);
-    rtrnShape.vertex(85,52);
-    rtrnShape.vertex(90,47);
-    rtrnShape.vertex(90,22);
-    rtrnShape.vertex(100,32);
-    rtrnShape.vertex(105,27);
-    rtrnShape.vertex(85,7);
-    rtrnShape.endShape();
-  }else{
-    rtrnShape.beginShape();
-    rtrnShape.strokeWeight(2);
-    rtrnShape.vertex(135,52);
-    rtrnShape.vertex(115,32);
-    rtrnShape.vertex(120,27);
-    rtrnShape.vertex(130,37);
-    rtrnShape.vertex(130,12);
-    rtrnShape.vertex(135,7);
-    rtrnShape.vertex(140,12);
-    rtrnShape.vertex(140,37);
-    rtrnShape.vertex(150,27);
-    rtrnShape.vertex(155,32);
-    rtrnShape.vertex(135,52);
-    rtrnShape.endShape();
-  }
-  return rtrnShape;
-}
-
 void arrowSetup(){
   matchArrs = new Arrow[4];
   
@@ -135,7 +69,6 @@ void arrowDraw(){
 
 void addMove(){
   double decision = Math.random();
-  
   if(decision < 0.25){
     moves.add("w");
     Arrow temp = new Arrow(2);
@@ -144,20 +77,17 @@ void addMove(){
   }else if(decision < 0.5){
     moves.add("a");
     Arrow temp = new Arrow(0);
-    temp.setFill(0);
-    temp.translate(0,600);
+    temp.tempSet();
     moveArrs.add(temp);
   }else if(decision < 0.75){
     moves.add("s");
     Arrow temp = new Arrow(3);
-    temp.setFill(0);
-    temp.translate(0,600);
+    temp.tempSet();
     moveArrs.add(temp);
   }else{
     moves.add("d");
     Arrow temp = new Arrow(1);
-    temp.setFill(0);
-    temp.translate(0,600);
+    temp.tempSet();
     moveArrs.add(temp);
   }
 }
@@ -177,7 +107,7 @@ void keyPressed(){
 void arrMove(){
   int len = moveArrs.size();
   for(int i = 0; i < len; i++){
-    moveArrs.get(i).translate(0,-3);
+    moveArrs.get(i).moveUp();
   }
 }
 
@@ -204,19 +134,19 @@ void count(){
 
 void checkMove(){
   if(moves.get(0) == "w"){
-    if(moveArrs.get(0).getVertex(5).y < 0){
+    if(moveArrs.get(0).getY(1) < 0){
       removeMove(0);
     }
   }else if(moves.get(0) == "a"){
-    if(moveArrs.get(0).getVertex(9).y < 0){
+    if(moveArrs.get(0).getY(2) < 0){
       removeMove(0);
     }
   }else if(moves.get(0) == "s"){
-    if(moveArrs.get(0).getVertex(5).y < 0){
+    if(moveArrs.get(0).getY(1) < 0){
       removeMove(0);
     }
   }else{
-    if(moveArrs.get(0).getVertex(0).y < 0){
+    if(moveArrs.get(0).getY(2) < 0){
       removeMove(0);
     }
   }

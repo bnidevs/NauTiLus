@@ -74,13 +74,24 @@ PShape makeArrow(int i){
 }
 
 void setFS(){
- this.setFill(220);
- this.setStroke(235);
+ arrowShape.setFill(220);
+ arrowShape.setStroke(235);
 }
 
 void tempSet(){
-  this.setFill(0);
-  this.translate(0,600);
+  arrowShape.setFill(0);
+  arrowShape.translate(0,600);
 }
+
+void moveUp(){
+  arrowShape.translate(0,-3);
+}
+
+float getY(int i) {
+  if (i == 1)
+    return arrowShape.getVertex(5).y;
+  else
+    return arrowShape.getVertex(9).y;
+}   
 
 }
