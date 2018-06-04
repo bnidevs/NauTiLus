@@ -43,5 +43,5 @@ kyle ::
 --------------------------------------------------------------
 bill :: finished latest menu implementation
 susan ::  
-kyle :: 
+kyle :: created arrow class
 ==============================================================
