@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 
 Arrow right, left, up, down;
-Arrow[] matchArrs;
-ArrayList<String> moves;
-ArrayList<Arrow> moveArrs;
+Arrow[] matchArrs; //four arrows on top left corner
+ArrayList<String> moves; //wasd coordination of moves
+ArrayList<Arrow> moveArrs; //arrows that move up
 int ctr;
 int _score;
 color backgroundcolor;
@@ -123,7 +123,6 @@ int find(String x, ArrayList<String> arr){
       rtrnVal++;
     }
   }
-  
   return -1;
 }
 
@@ -139,31 +138,59 @@ void checkMove(){
   if(moves.get(0) == "w"){
     if(moveArrs.get(0).getY(1) < 0){
       removeMove(0);
+      _score -= 2;
     }
   }else if(moves.get(0) == "a"){
     if(moveArrs.get(0).getY(2) < 0){
       removeMove(0);
+     _score -= 2;
     }
   }else if(moves.get(0) == "s"){
     if(moveArrs.get(0).getY(1) < 0){
       removeMove(0);
+      _score -= 2;
     }
   }else{
     if(moveArrs.get(0).getY(2) < 0){
       removeMove(0);
+      _score -= 2;
     }
   }
 }
 void score() {
+  float ydiff;
   if (moves.get(0) == "w" || moves.get(0) == "s") {
-    if (moveArrs.get(0).getY(1) == 52) {
-      _score += 7; //flawless
-    }
+    ydiff = abs(moveArrs.get(0).getY(1) - 52);//distance bwtn moves and moveArrs
   }
   else {
-    if (moveArrs.get(0).getY(2) == 50) {
-      _score += 7; //flawless
-    }
+    ydiff = abs(moveArrs.get(0).getY(2) - 50);//distance bwtn moves and moveArrs
   }
-  
+  if ((int) ydiff == 0) {
+    _score += 7; //flawless
+  }
+  else if (ydiff < 5) {
+    _score += 6; //perfect
+  }
+  else if (ydiff < 10) {
+    _score += 5; //excellent
+  }
+  else if (ydiff < 15) {
+    _score += 4; //great
+  }
+  else if (ydiff < 20) {
+    _score += 3; //good 
+  }
+  else if (ydiff < 25) {
+    _score += 2; //okay
+  }
+  else if (ydiff < 30) {
+    _score += 1; //almost
+  }
+  else if (ydiff < 35) {
+    _score -= 1; //bad
+  }
+  else {
+    _score -= 2; //miss
+  }
+  println(_score);
 }
