@@ -5,11 +5,13 @@ Arrow[] matchArrs;
 ArrayList<String> moves;
 ArrayList<Arrow> moveArrs;
 int ctr;
+int _score;
+color backgroundcolor;
 
 void setup(){
   size(700,500);
-  background(255);
   frameRate(60);
+  backgroundcolor = color(96,0,193);
   ctrSetup();
   moveSetup();
   arrowSetup();
@@ -17,7 +19,7 @@ void setup(){
 }
 
 void draw(){
-  background(255);
+  background(backgroundcolor);
   arrowDraw();
   arrMove();
   if(moves.size() > 0){
@@ -93,6 +95,7 @@ void addMove(){
 }
 
 void removeMove(int pos){
+  score();
   moves.remove(pos);
   moveArrs.remove(pos);
 }
@@ -150,4 +153,17 @@ void checkMove(){
       removeMove(0);
     }
   }
+}
+void score() {
+  if (moves.get(0) == "w" || moves.get(0) == "s") {
+    if (moveArrs.get(0).getY(1) == 52) {
+      _score += 7; //flawless
+    }
+  }
+  else {
+    if (moveArrs.get(0).getY(2) == 50) {
+      _score += 7; //flawless
+    }
+  }
+  
 }

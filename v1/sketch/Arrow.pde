@@ -9,7 +9,7 @@ public Arrow(int i) {
 
 PShape makeArrow(int i){
   PShape rtrnShape = createShape();
-  if(i == 0){
+  if(i == 0){//right
     rtrnShape.beginShape();
     rtrnShape.strokeWeight(2);
     rtrnShape.vertex(10,30);
@@ -24,7 +24,7 @@ PShape makeArrow(int i){
     rtrnShape.vertex(30,50);
     rtrnShape.vertex(10,30);
     rtrnShape.endShape();
-  }else if(i == 1){
+  }else if(i == 1){//left
     rtrnShape.beginShape();
     rtrnShape.strokeWeight(2);
     rtrnShape.vertex(210,30);
@@ -39,7 +39,7 @@ PShape makeArrow(int i){
     rtrnShape.vertex(190,50);
     rtrnShape.vertex(210,30);
     rtrnShape.endShape();
-  }else if(i == 2){
+  }else if(i == 2){//up
     rtrnShape.beginShape();
     rtrnShape.strokeWeight(2);
     rtrnShape.vertex(85,7);
@@ -54,20 +54,20 @@ PShape makeArrow(int i){
     rtrnShape.vertex(105,27);
     rtrnShape.vertex(85,7);
     rtrnShape.endShape();
-  }else{
+  }else{//down
     rtrnShape.beginShape();
     rtrnShape.strokeWeight(2);
-    rtrnShape.vertex(135,52);
-    rtrnShape.vertex(115,32);
-    rtrnShape.vertex(120,27);
-    rtrnShape.vertex(130,37);
-    rtrnShape.vertex(130,12);
     rtrnShape.vertex(135,7);
     rtrnShape.vertex(140,12);
     rtrnShape.vertex(140,37);
     rtrnShape.vertex(150,27);
     rtrnShape.vertex(155,32);
     rtrnShape.vertex(135,52);
+    rtrnShape.vertex(115,32);
+    rtrnShape.vertex(120,27);
+    rtrnShape.vertex(130,37);
+    rtrnShape.vertex(130,12);
+    rtrnShape.vertex(135,7);
     rtrnShape.endShape();
   }
   return rtrnShape;
@@ -89,9 +89,9 @@ void moveUp(){
 
 float getY(int i) {
   if (i == 1)
-    return arrowShape.getVertex(5).y;
+    return arrowShape.getVertex(6).y;
   else
-    return arrowShape.getVertex(9).y;
+    return arrowShape.getVertex(10).y;
 }   
 
 }
