@@ -4,9 +4,9 @@ M 2018-06-04
 Which jobs are most crucial? 
 	Menu to other part linkage
   
-  Instruction + Credits Page
+ 	Instruction + Credits Page
   
-  Endgame + Scoring
+ 	Endgame + Scoring
   
 Which components constitute core functionality (vs. non-essential)? 
   essential: the game core (moving arrows, reading keys to score and remove arrows)
