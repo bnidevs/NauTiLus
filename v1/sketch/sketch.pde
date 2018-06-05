@@ -136,36 +136,32 @@ void count(){
 
 void checkMove(){
   if(moves.get(0) == "w"){
-    if(moveArrs.get(0).getY(1) < 0){
+    if(moveArrs.get(0).ycor < -45){
       removeMove(0);
-      _score -= 2;
     }
   }else if(moves.get(0) == "a"){
-    if(moveArrs.get(0).getY(2) < 0){
+    if(moveArrs.get(0).ycor < -45){
       removeMove(0);
-     _score -= 2;
     }
   }else if(moves.get(0) == "s"){
-    if(moveArrs.get(0).getY(1) < 0){
+    if(moveArrs.get(0).ycor < -45){
       removeMove(0);
-      _score -= 2;
     }
   }else{
-    if(moveArrs.get(0).getY(2) < 0){
+    if(moveArrs.get(0).ycor < -45){
       removeMove(0);
-      _score -= 2;
     }
   }
 }
 void score() {
   float ydiff;
   if (moves.get(0) == "w" || moves.get(0) == "s") {
-    ydiff = abs(moveArrs.get(0).getY(1) - 52);//distance bwtn moves and moveArrs
-  }
+    ydiff = abs(moveArrs.get(0).ycor - 52);//distance bwtn moves and moveArrs 
+}
   else {
-    ydiff = abs(moveArrs.get(0).getY(2) - 50);//distance bwtn moves and moveArrs
+    ydiff = abs(moveArrs.get(0).ycor - 50);//distance bwtn moves and moveArrs
   }
-  if ((int) ydiff == 0) {
+  if ((int)ydiff == 0) {
     _score += 7; //flawless
   }
   else if (ydiff < 5) {

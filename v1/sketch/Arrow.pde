@@ -1,10 +1,12 @@
 class Arrow {
 
 PShape arrowShape;
+int ycor;
 
 public Arrow(int i) {
   arrowShape = makeArrow(i); 
   setFS();
+  ycor = 650;
 }
 
 PShape makeArrow(int i){
@@ -85,13 +87,14 @@ void tempSet(){
 
 void moveUp(){
   arrowShape.translate(0,-3);
+  ycor -= 3;
 }
 
 float getY(int i) {
   if (i == 1)
-    return arrowShape.getVertex(6).y;
+    return arrowShape.getVertex(5).y;
   else
-    return arrowShape.getVertex(10).y;
+    return arrowShape.getVertex(9).y;
 }   
 
 }
