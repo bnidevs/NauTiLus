@@ -34,14 +34,21 @@ LESSONS LEARNED
 
 2018-05-
 --------------------------------------------------------------
-bill :: 
-susan ::  
-kyle :: 
+bill :: revised proposal according to suggestions 
+susan :: worked on plan 
+kyle :: worked on uml 
 ==============================================================
 
 2018-06-01
 --------------------------------------------------------------
 bill :: finished latest menu implementation
-susan ::  
+susan :: worked on gif background (proven not viable) 
 kyle :: created arrow class
+==============================================================
+
+2018-06-04
+--------------------------------------------------------------
+bill :: continued working on menu 
+susan :: pair programmed w/ kyle for scoring 
+kyle :: pair programmed w/ susan for scoring 
 ==============================================================
