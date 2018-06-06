@@ -1,0 +1,26 @@
+TEAM NAUTILUS (Bill Ni, Kyle Tau, Susan Lin) 
+W 2018-06-06
+
+To Do List:
+Menu Linkage
+Background, GIF style
+Instructions and Credits
+
+Which jobs are most crucial? 
+	Menu to other part linkage
+  
+ 	Instruction + Credits Page
+  
+Which components constitute core functionality (vs. non-essential)? 
+  essential: the game core (moving arrows, reading keys to score and remove arrows)
+  
+  non-essential: instructions, credits, life bar (<- not planned but possible), difficulties, double arrows (two at a time)
+  
+Which components are prerequisites for others? 
+  part to part linkage is prereq for functionality
+  
+  game core is prereq for everything added to it
+  
+Which tasks can be delegated and which must be collaboratively tackled? 
+  Displaying score and background --> pair programming
+  Menu Linkage, Instructions, Credits --> solo programming
