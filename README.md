@@ -1,6 +1,6 @@
 # Data Dancing
 ### Team NauTiLus <img src="https://allabouttheatre.org/wp-content/uploads/2018/03/Yellow-Submarine.png" height="25"> 
-### Susan Lin, Kyle Tau, Bill Ni
+#### Susan Lin, Kyle Tau, Bill Ni
 
 ## Background
 APCS Final Project #2
