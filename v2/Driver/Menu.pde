@@ -8,22 +8,7 @@ PFont buttonFont;
 
 PImage titleLogo;
 
-void setup(){
-  size(700,500);
-  buttonSetup();
-  colorSetup();
-  fontSetup();
-  buttonTextSetup();
-  logoSetup();
-}
-
-void draw(){
-  background(0);
-  buttonHover();
-  buttonDraw();
-  txtDraw();
-  titleDraw();
-}
+int displaceMenu;
 
 void buttonDraw(){
   for(PShape p : buttonArr){
@@ -36,17 +21,17 @@ void txtDraw(){
   for(String s : buttonTxtArr){
     textFont(buttonFont);
     fill(priTextColor);
-    text(s,270,i);
+    text(s,displaceMenu + 270,i);
     i += 30;
   }
 }
 
 void titleDraw(){
-  image(titleLogo, 250, 50);
+  image(titleLogo, displaceMenu + 250, 50);
 }
 
 void buttonHover(){
-  if(mouseX > 260 && mouseX < 440){
+  if(mouseX > displaceMenu + 260 && mouseX < displaceMenu + 440){
     if(mouseY > 290 && mouseY < 310){
       buttonArr[0].setFill(secButtonColor);
     }else if(mouseY > 320 && mouseY < 340){
@@ -66,13 +51,15 @@ void buttonHover(){
 }
 
 void buttonSetup(){
+  displaceMenu = 0;
+  
   buttonArr = new PShape[3];
   
-  songSelectButton = createShape(RECT, 260, 290, 180, 20);
+  songSelectButton = createShape(RECT, displaceMenu + 260, 290, 180, 20);
   
-  instructButton = createShape(RECT, 260, 320, 180, 20);
+  instructButton = createShape(RECT, displaceMenu + 260, 320, 180, 20);
   
-  creditsButton = createShape(RECT, 260, 350, 180, 20);
+  creditsButton = createShape(RECT, displaceMenu + 260, 350, 180, 20);
   
   buttonArr[0] = songSelectButton;
   buttonArr[1] = instructButton;
