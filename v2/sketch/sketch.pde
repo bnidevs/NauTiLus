@@ -156,6 +156,8 @@ void checkMove(){
 }
 void score() {
   float ydiff;
+  PFont scoreFont = createFont("ARCADE_R.ttf",20);
+  textFont(scoreFont);
   if (moves.get(0) == "w" || moves.get(0) == "s") {
     ydiff = abs(moveArrs.get(0).ycor - 52);//distance bwtn moves and moveArrs 
 }
@@ -164,21 +166,27 @@ void score() {
   }
   if ((int)ydiff == 0) {
     _score += 7; //flawless
+    fill(color(0)); 
   }
   else if (ydiff < 5) {
     _score += 6; //perfect
+    fill(color(0)); 
   }
   else if (ydiff < 10) {
     _score += 5; //excellent
+    fill(color(0)); 
   }
   else if (ydiff < 15) {
     _score += 4; //great
+    fill(color(0)); 
   }
   else if (ydiff < 20) {
     _score += 3; //good 
+    fill(color(0)); 
   }
   else if (ydiff < 25) {
     _score += 2; //okay
+   s fill(color(0)); 
   }
   else if (ydiff < 30) {
     _score += 1; //almost
@@ -196,12 +204,9 @@ void displayScore() {
   color g = color(96,0,193);
   fill(g);
   rect(450,50,200,100);
-  
   PFont scoreFont = createFont("ARCADE_R.ttf",20);
-  
   textFont(scoreFont);
   fill(0);
   text("score: ", 500,90); 
   text(_score,540,125);
-  
 }
