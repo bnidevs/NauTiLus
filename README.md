@@ -15,6 +15,9 @@ Our game relies on separate processing files for songs (separated by difficulty 
 <a href="https://github.com/bnidevs/NauTiLus/tree/master/docs/plan">Daily Plans</a> <br>
 
 ## Launching Instructions
-1. ```$ cd NauTiLus```
-2. ```$ processing NauTiLus.pde```
-3. Click on one of the menu options (the rest is self-explanatory)
+1. clone our repo
+2. ```$ cd NauTiLus```
+3. ```$ processing Driver.pde```
+4. Click on one of the menu options (the rest is self-explanatory)
+
+once user begins a song, arrows will appear from the bottom of the screen and go up. user score will be displayed and with every key pressed, the score will update and a word will appear on the screen to notify the user of their performance. 
