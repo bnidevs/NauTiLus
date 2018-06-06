@@ -7,6 +7,7 @@ ArrayList<Arrow> moveArrs; //arrows that move up
 int ctr;
 int _score;
 color backgroundcolor;
+String word;
 
 void setup(){
   size(700,500);
@@ -16,6 +17,7 @@ void setup(){
   moveSetup();
   arrowSetup();
   arrowDraw();
+  word = ""; 
 }
 
 void draw(){
@@ -165,37 +167,40 @@ void score() {
     ydiff = abs(moveArrs.get(0).ycor - 50);//distance bwtn moves and moveArrs
   }
   if ((int)ydiff == 0) {
-    _score += 7; //flawless
-    fill(color(0)); 
+    _score += 7; //flawless 
+    word = "FLAWLESS"; 
   }
   else if (ydiff < 5) {
     _score += 6; //perfect
-    fill(color(0)); 
+    word = "PERFECT";
   }
   else if (ydiff < 10) {
     _score += 5; //excellent
-    fill(color(0)); 
+    word = "EXCELLENT";
   }
   else if (ydiff < 15) {
     _score += 4; //great
-    fill(color(0)); 
+    word = "GREAT";
   }
   else if (ydiff < 20) {
     _score += 3; //good 
-    fill(color(0)); 
+    word = "GOOD";
   }
   else if (ydiff < 25) {
     _score += 2; //okay
-   s fill(color(0)); 
+    word = "OKAY";
   }
   else if (ydiff < 30) {
     _score += 1; //almost
+    word = "ALMOST";
   }
   else if (ydiff < 35) {
     _score -= 1; //bad
+    word = "SO BAD";
   }
   else {
     _score -= 2; //miss
+    word = "MISS";
   }
   println(_score);
 }
@@ -209,4 +214,23 @@ void displayScore() {
   fill(0);
   text("score: ", 500,90); 
   text(_score,540,125);
+  if (word.equals("FLAWLESS")) 
+    fill(color(96,0,193)); //purple
+  else if (word.equals("PERFECT")) 
+    fill(color(29,0,238)); //dark blue
+  else if (word.equals("EXCELLENT")) 
+    fill(color(166,247,237)); //baby blue
+  else if (word.equals("GREAT")) 
+    fill(color(30,255,201)); //green-blue
+  else if (word.equals("GOOD")) 
+    fill(color(55,251,16)); //green
+  else if (word.equals("GREAT")) 
+    fill(color(247,255,5)); //yellow
+  else if (word.equals("ALMOST")) 
+    fill(color(255,170,0)); //orange
+  else if (word.equals("BAD")) 
+    fill(color(255,104,0)); //red-orange
+  else if (word.equals("MISS")) 
+    fill(color(250,64,24)); //red
+  text(word, 475, 300);
 }
