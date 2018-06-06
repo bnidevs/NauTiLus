@@ -201,7 +201,7 @@ void displayScore() {
   
   textFont(scoreFont);
   fill(0);
-  text("score: ", 500, 50); 
-  text(_score,540,100);
+  text("score: ", 500,90); 
+  text(_score,540,125);
   
 }
