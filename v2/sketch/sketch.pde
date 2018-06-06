@@ -11,7 +11,7 @@ color backgroundcolor;
 void setup(){
   size(700,500);
   frameRate(60);
-  backgroundcolor = color(96,0,193);
+  backgroundcolor = color(0);
   ctrSetup();
   moveSetup();
   arrowSetup();
@@ -20,6 +20,7 @@ void setup(){
 
 void draw(){
   background(backgroundcolor);
+  displayScore();
   arrowDraw();
   arrMove();
   if(moves.size() > 0){
@@ -189,4 +190,18 @@ void score() {
     _score -= 2; //miss
   }
   println(_score);
+}
+
+void displayScore() {
+  color g = color(96,0,193);
+  fill(g);
+  rect(450,50,200,100);
+  
+  PFont scoreFont = createFont("ARCADE_R.ttf",20);
+  
+  textFont(scoreFont);
+  fill(0);
+  text("score: ", 500, 50); 
+  text(_score,540,100);
+  
 }
