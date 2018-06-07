@@ -17,7 +17,7 @@ Our game relies on separate processing files for songs (separated by difficulty 
 
 ## Launching Instructions
 1. ```$ git clone git@github.com:bnidevs/NauTiLus.git```
-2. ```$ cd NauTiLus/Driver```
+2. ```$ cd NauTiLus```
 3. ```$ processing Driver.pde```
 4. Click on one of the menu options (the rest is self-explanatory)
 
