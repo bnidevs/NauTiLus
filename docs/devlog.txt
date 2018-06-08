@@ -32,7 +32,7 @@ LESSONS LEARNED
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-2018-05-
+2018-05-31
 --------------------------------------------------------------
 bill :: revised proposal according to suggestions 
 susan :: worked on plan 
@@ -52,3 +52,18 @@ bill :: continued working on menu
 susan :: pair programmed w/ kyle for scoring 
 kyle :: pair programmed w/ susan for scoring 
 ==============================================================
+
+2018-06-05
+--------------------------------------------------------------
+bill :: worked on menu/sketch and linkage 
+susan :: pair programmed w/ kyle for making words to match score 
+kyle :: pair programmed w/ susan for making words to match score
+==============================================================
+
+2018-06-07
+--------------------------------------------------------------
+bill :: created Driver folder and rest of screens (credits, menu) 
+susan :: updated readme to explain functionality  
+kyle :: wrote instructions 
+==============================================================
+
