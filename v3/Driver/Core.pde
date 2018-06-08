@@ -22,6 +22,7 @@ void coreSetup(){
 
 void coreDraw(){
   background(backgroundcolor);
+  danceBG();
   displayScore();
   arrowDraw();
   arrMove();
@@ -223,6 +224,8 @@ void displayScore() {
     fill(color(166,247,237)); //baby blue
   else if (word.equals("GREAT")) 
     fill(color(30,255,201)); //green-blue
+  else if (word.equals("OKAY"))
+    fill(color(255,255,0)); //yellow
   else if (word.equals("GOOD")) 
     fill(color(55,251,16)); //green
   else if (word.equals("ALMOST")) 
@@ -232,4 +235,24 @@ void displayScore() {
   else if (word.equals("MISS")) 
     fill(color(250,64,24)); //red
   text(word, 470, 300);
+}
+
+void danceBG() {
+ PImage sprite; 
+ if (ctr <= 15){
+   sprite = loadImage("sprite1.png");
+ }
+ else if (ctr <= 30){
+   sprite = loadImage("sprite2.png");
+ }
+ else if (ctr <= 45){
+   sprite = loadImage("sprite3.png");
+ }
+ else {
+   sprite = loadImage("sprite4.png");
+ }
+ image(sprite, 325, 350);
+ image(sprite, 325, 250);
+ image(sprite, 325, 150);
+ image(sprite, 325, 50);
 }
