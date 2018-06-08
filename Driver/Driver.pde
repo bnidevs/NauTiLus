@@ -124,5 +124,6 @@ void mouseClicked(){
     _score = 0;
     scoreTypeContainer = new int[9];
     ctr = 0;
+    word = "";
   }
 }

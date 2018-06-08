@@ -250,7 +250,7 @@ void displayScore() {
     fill(color(30,255,201)); //green-blue
   else if (word.equals("GOOD")) 
     fill(color(55,251,16)); //green
-  else if (word.equals("OKAY"))
+  else if (word.equals("OK"))
     fill(color(255,221,0)); // yellow
   else if (word.equals("ALMOST")) 
     fill(color(255,170,0)); //orange
