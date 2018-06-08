@@ -13,6 +13,7 @@ Our game has the gameplay, credits, and instructions which are all linked to the
 Our Arrow class contains the basic structure and functionality of a game arrow (all the physical attributes and then select methods like getYCor).
 The core file utilizes our own implementatioin of queues with the element being type Arrow to produce arrows on screen. 
 Each difficulty has a set number of arrows and tempo. The difficulty is determined by the number of arrows in a given time period with a higher amount of arrows meaning a faster tempo. Once the game has given you a set number of arrows, the game ends.
+For clarification purposes, we have the data folder (to include character images), an imported font (ARCADE_R.ttf), our various aforementioned screens, a Core (the v1 and v2 version of sketch), and a Driver.
 
 ## Documentation
 Our devlog: <a href="https://github.com/bnidevs/NauTiLus/blob/master/docs/devlog.txt">Development Log</a> <br>
@@ -21,7 +22,7 @@ Our daily plans: <a href="https://github.com/bnidevs/NauTiLus/tree/master/docs/p
 
 ## Launching Instructions
 1. ```$ git clone git@github.com:bnidevs/NauTiLus.git```
-2. ```$ cd NauTiLus```
+2. ```$ cd NauTiLus/Driver```
 3. ```$ processing Driver.pde```
 4. Click on one of the menu options (the rest is self-explanatory)
 
